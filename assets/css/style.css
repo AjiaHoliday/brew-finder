@@ -1,0 +1,210 @@
+body {
+    font-family: 'Anton', sans-serif;
+    color: rgba(63, 17, 17, 100);
+}
+
+.icon {
+    color:none;
+}
+
+header {
+    height: 150px;
+    border-radius: 20px;
+    background-color: rgba(131, 118, 107, 100);
+    box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+}
+
+header h1{
+    color: rgba(239, 221, 65, 100);
+    font-size: 100px;
+    font-family: 'Anton', sans-serif;
+    display: inline;
+    text-align: start;
+}
+
+h2 {
+    color: rgba(63, 17, 17, 100);
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+h3 {
+    color: rgba(63, 17, 17, 100);
+    font-size: 28px;   
+}
+
+h4 {
+    color: rgba(63, 17, 17, 100);
+    font-size: 15px;  
+}
+
+#find-brew {
+    height: 175px;
+    border-radius: 20px;
+    background-color: rgba(255, 248, 207, 100);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 100);
+}
+
+.search-input {
+    width: 95%;
+    margin:10px;
+}
+
+#brew-name, #location {
+    display: inline-flexbox;
+    min-height: 400px;
+    border-radius: 20px;
+    background-color: rgba(255, 248, 207, 100);
+    border: 1px solid rgba(187, 187, 187, 100);
+}
+
+#recent-searches {
+    height: 531px;
+    border-radius: 20px;
+    background-color: rgba(255, 248, 207, 100);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 100);
+}
+
+#fav-brews {
+    height: fit-content;
+    border-radius: 20px;
+    background-color: rgba(255, 248, 207, 100);
+    border: 1px solid rgba(187, 187, 187, 100);
+    min-height: 327px;
+}
+
+.button {
+    pointer-events: initial;
+}
+
+#brew-name, #location, #fav-brews {
+    max-width: screen;
+}
+
+.brew-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(242, 204, 53);
+    width: 90%;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.brewD {
+    background-color: rgb(242, 204, 53);
+    width: 90%;
+    border-radius: 10px;    
+}
+
+#brew-name-sub .box {
+    height: auto;
+    padding: 0px;
+    margin-bottom: 20px;    
+}
+
+#brew-name {
+    height: fit-content; 
+    position:relative;
+}
+
+#brew-name .control .icon {
+    color: #4a4a4a;
+    position: absolute;
+    top: 50%;
+    right: 5%;   
+    transform: translate(-10%, -50%);
+}
+
+#brew-name .control .icon:hover {
+    color: white;
+}
+
+#map {
+    height: 300px;
+    width: 90%;
+    border-radius: 15px;
+}
+
+.historyItem {
+    list-style: none;
+    font-size: 25px;
+    background-color: rgba(131, 118, 107, 100);
+    color:white;
+    border-radius: 15px;
+    letter-spacing: 2px;
+}
+
+.favItem {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(242, 204, 53);
+    width: 60%;
+    border-radius: 15px;
+    
+}
+.fav a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+.item{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between
+  }
+
+.columns button{
+    margin-top: auto;
+  }
+
+@media screen and (max-width: 768px) {
+    header h1{
+        font-size: 96px;
+        font-family: 'Anton', sans-serif;
+        display: inline;
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+    
+    header img{
+        height: 80px;
+        width: 80px;
+    }
+    
+    h2, h3 {
+        font-size: 42px;
+    }
+
+    #recent-searches {
+        visibility: hidden;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        height: 100px;
+        border-radius: 20px;
+        background-color: rgba(131, 118, 107, 100);
+        box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(187, 187, 187, 100);
+    }
+
+    header h1{
+        font-size: 50px;
+        font-family: 'Anton', sans-serif;
+        display: block;
+        text-align: center;
+    }
+}

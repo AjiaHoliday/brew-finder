@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Brew Finder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- JQuery -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body class="is-centered">
+        <div class="columns is-centered">
+            <header class="column">
+                <h1>    
+                    <figure class="image is-96x96 is-inline-block is-hidden-mobile">
+                        <img src="assets/images/beer.png">
+                    </figure>              
+                    BREW
+                    <figure class="image is-64x64 is-inline-block is-hidden-tablet is-vcentered">
+                        <img src="assets/images/beer.png">
+                    </figure>   
+                     FINDER
+                </h1>
+            </header>
+        </div>
+        <div class="container.is-widescreen">
+            <div id="modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <h2>Please enter a valid US city name.</h2>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close" control-id="ControlID-2"></button>
+            </div>
+            <div class="columns is-centered is-8 is-gapless">
+                <div class="column is-one-quarter m-4">
+                    <section id="find-brew " class="box box-radius-large" >
+                        <h2>Find a Brewery</h2>
+                        <div class="control has-icons-left">
+                            <div class="search-input field has-addons">
+                                <div class="control is-expanded">
+                                    <input id="searchBrew" class="search-brews input is-rounded pl-auto pr-auto" type="text" placeholder="Search City" control-id="ControlID-1">
+                                    <span class="icon is-medium is-left">
+                                            <ion-icon name="search-outline"></ion-icon> 
+                                    </span>
+                                </div>
+                                <div class= "control">
+                                    <a class="button is-light" id="searchBtn" type="submit">
+                                        Go
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="recent-searches" class="box mt-6 mr-2">
+                        <h3>Recent Searches</h3>
+                        <div class="past-brews" id="recents"></div>
+                        <h4 id="clearRecents" class="button is-rounded is-fullwidth is-light is-danger"><ion-icon name="close-circle-outline"></ion-icon>clear recents</h4>
+                    </section>
+                </div>
+                <div class="column is-8">
+                    <div class="columns is-centered is-two-thirds is-gapless mb-0">
+                        <section id="brew-name" class="brewList column is-half mt-4 ml-4 mr-2 mb-2 box">
+                            <div id="brew-name-sub">
+                                <h2>Breweries</h2>
+                            </div>
+                        </section>
+                        <section id="location" class="column is-half mt-4 mx-2 mb-2 box">
+                            <h2>Location</h2>
+                            <div class="map mr-auto ml-auto" id="map"
+                            ></div>
+                        </section>
+                    </div>
+                    <div class=" is-gapless ">
+                        <section id="fav-brews" class="column is-full m-2 box">                           
+                                <h2 class="">Favorites</h2>
+                                <div id="fav" class="fav columns is-multiline is-centered has-text-centered"></div>
+                                <h4 id="clearFavs" class="button is-rounded is-two-thirds is-light is-danger is-fullwidth"><ion-icon name="close-circle-outline"></ion-icon>clear favorites</h4>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4vSMTJOzICan_oOMaDuwg5Opip3408bk&callback=initMap"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./assets/JS/script.js"></script>
+    </body>
+</html>
